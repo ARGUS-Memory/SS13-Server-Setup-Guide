@@ -31,7 +31,7 @@ Dream Daemon will appear frozen for 30 seconds to a couple of minutes. It's load
 
 ## Connecting
 
-Once Dream Daemon shows the world as running, open BYOND and go to **File → Open Location**. Enter:
+Once Dream Daemon shows the world as running, open BYOND and click **Open** in the top-left. Enter:
 
 ```
 byond://localhost:2337

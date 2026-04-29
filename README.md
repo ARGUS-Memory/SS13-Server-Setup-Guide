@@ -56,7 +56,7 @@ Rank capitalisation matters. Save and close.
 
 Open **Dream Daemon**, load the `.dmb` file from your codebase folder, and press **GO**. The server will be unresponsive for a minute or two while the world initialises; that's normal.
 
-Once it's up, open BYOND, go to **File → Open Location**, and enter:
+Once it's up, open BYOND and click **Open** in the top-left, then enter:
 
 ```
 byond://localhost:2337
