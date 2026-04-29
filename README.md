@@ -54,7 +54,15 @@ Rank capitalisation matters. Save and close.
 
 ### 4. Launch
 
-Open **Dream Daemon**, load the `.dmb` file from your codebase folder, and press **GO**. The server will be unresponsive for a minute or two while the world initialises; that's normal. Click the yellow **Join** button once it's up.
+Open **Dream Daemon**, load the `.dmb` file from your codebase folder, and press **GO**. The server will be unresponsive for a minute or two while the world initialises; that's normal.
+
+Once it's up, open BYOND, go to **File → Open Location**, and enter:
+
+```
+byond://localhost:2337
+```
+
+Replace `2337` with whatever port you set in Dream Daemon.
 
 [Full details: 04-launching.md](docs/04-launching.md)
 

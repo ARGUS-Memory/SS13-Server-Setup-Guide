@@ -29,9 +29,15 @@ Dream Daemon will appear frozen for 30 seconds to a couple of minutes. It's load
 
 ---
 
-## Joining
+## Connecting
 
-Once Dream Daemon shows the world as running, click the yellow **Join** button. Wait for the in-game initialisation to finish before running any commands; the round starts in a pre-game lobby.
+Once Dream Daemon shows the world as running, open BYOND and go to **File → Open Location**. Enter:
+
+```
+byond://localhost:2337
+```
+
+Replace `2337` with the port you set in Dream Daemon if you changed it. Wait for the in-game initialisation to finish before running any commands; the round starts in a pre-game lobby.
 
 ---
 
