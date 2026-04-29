@@ -4,18 +4,6 @@ Get a local SS13 server running from a public codebase. Five steps, no database 
 
 ---
 
-## Steps at a Glance
-
-| Step | Action |
-|------|--------|
-| 1 | Download and extract the codebase |
-| 2 | Compile in Dream Maker |
-| 3 | Set yourself as admin |
-| 4 | Launch with Dream Daemon |
-| 5 | (Remote only) Open a port |
-
----
-
 ## Prerequisites
 
 - **BYOND** installed: [byond.com](https://www.byond.com/download)
@@ -30,15 +18,25 @@ Get a local SS13 server running from a public codebase. Five steps, no database 
 
 Download the repository ZIP from GitHub (**Code → Download ZIP**, top-right of the file list) and extract it to a folder with no spaces in the path.
 
-→ [docs/01-getting-the-code.md](docs/01-getting-the-code.md)
+[Full details: 01-getting-the-code.md](docs/01-getting-the-code.md)
+
+---
 
 ### 2. Compile
 
-Double-click `BUILD.bat` in the repository root (or `bin/build.cmd`). The build script compiles both the DM code and the tgui JavaScript layer. It installs Node automatically on Windows.
+`config/` is empty on a fresh clone. Before compiling, copy these files from `config/example/` into `config/`:
 
-While it runs: copy everything from `config/example/` into `config/`. If Windows asks about conflicts, choose **Don't copy**.
+- `admins.txt`
+- `admin_ranks.txt`
+- `config.txt`
+- `game_options.txt`
+- `dbconfig.txt`
 
-→ [docs/02-compiling.md](docs/02-compiling.md)
+Then double-click `BUILD.bat` in the repository root (or `bin/build.cmd`). The build script compiles the DM code and the tgui JavaScript layer and installs Node automatically on Windows. A full compile takes 3-15 minutes.
+
+[Full details: 02-compiling.md](docs/02-compiling.md)
+
+---
 
 ### 3. Set yourself as admin
 
@@ -50,19 +48,23 @@ YourBYONDUsername = Host
 
 Rank capitalisation matters. Save and close.
 
-→ [docs/03-admin-config.md](docs/03-admin-config.md)
+[Full details: 03-admin-config.md](docs/03-admin-config.md)
+
+---
 
 ### 4. Launch
 
 Open **Dream Daemon**, load the `.dmb` file from your codebase folder, and press **GO**. The server will be unresponsive for a minute or two while the world initialises; that's normal. Click the yellow **Join** button once it's up.
 
-→ [docs/04-launching.md](docs/04-launching.md)
+[Full details: 04-launching.md](docs/04-launching.md)
+
+---
 
 ### 5. Port forwarding (remote players only)
 
 Forward port **2337** (TCP + UDP) through your router to your PC's local IP. Players connect via `byond://YOUR.PUBLIC.IP:2337`.
 
-→ [docs/05-port-forwarding.md](docs/05-port-forwarding.md)
+[Full details: 05-port-forwarding.md](docs/05-port-forwarding.md)
 
 ---
 
@@ -77,20 +79,7 @@ Open the `.dme` in Dream Maker, uncheck the current map's `.dm` file under `maps
 | `stellar_delight` | Larger station |
 | `groundbase` | Surface/ground variant |
 
-→ [docs/06-map-selection.md](docs/06-map-selection.md)
-
----
-
-## docs/ Index
-
-| File | Contents |
-|------|----------|
-| [01-getting-the-code.md](docs/01-getting-the-code.md) | Codebase options, download, extraction |
-| [02-compiling.md](docs/02-compiling.md) | Dream Maker compilation and config setup |
-| [03-admin-config.md](docs/03-admin-config.md) | admins.txt, ranks, first-time admin |
-| [04-launching.md](docs/04-launching.md) | Dream Daemon: load, start, join, stop |
-| [05-port-forwarding.md](docs/05-port-forwarding.md) | Opening ports for remote players |
-| [06-map-selection.md](docs/06-map-selection.md) | Switching maps, compile-time options |
+[Full details: 06-map-selection.md](docs/06-map-selection.md)
 
 ---
 
@@ -99,4 +88,4 @@ Open the `.dme` in Dream Maker, uncheck the current map's `.dm` file under `maps
 - Nothing is exposed to the internet until you forward a port.
 - Players need a free BYOND account to connect.
 - Admin ranks are case-sensitive: `host` won't work, `Host` will.
-- If Dream Daemon crashes immediately, the compile probably finished with errors.
+- If Dream Daemon crashes immediately, the compile finished with errors.

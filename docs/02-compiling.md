@@ -8,12 +8,15 @@
 
 Do this before compiling.
 
-1. Open the codebase folder in Explorer.
-2. Go into `config/example/`.
-3. Select all (`Ctrl+A`), copy, paste into `config/`.
-4. If Windows asks about conflicts, choose **Don't copy**.
+The `config/` folder is empty on a fresh clone. The templates live in `config/example/`. Copy the following files from there into `config/`:
 
-Any file already in `config/` stays as-is. The example files are defaults for files that don't exist yet.
+- `admins.txt`
+- `admin_ranks.txt`
+- `config.txt`
+- `game_options.txt`
+- `dbconfig.txt`
+
+The templates work as-is for a basic local server. You'll edit `admins.txt` in the next step.
 
 ---
 
