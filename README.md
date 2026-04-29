@@ -70,14 +70,14 @@ Forward port **2337** (TCP + UDP) through your router to your PC's local IP. Pla
 
 ## Changing the Map
 
-Open the `.dme` in Dream Maker, uncheck the current map's `.dm` file under `maps/`, check the one you want, and recompile.
+Open `maps/~map_system/_map_selection.dm` in any text editor. Comment out the current active `#define` and uncomment the one you want, then recompile.
 
-| Map | Notes |
-|-----|-------|
-| `virgo_minitest` | Smallest; compiles and loads fastest |
-| `tether` | Mid-size station |
-| `stellar_delight` | Larger station |
-| `groundbase` | Surface/ground variant |
+| Define | Map | Notes |
+|--------|-----|-------|
+| `USE_MAP_MINITEST` | `virgo_minitest` | Smallest; compiles and loads fastest |
+| `USE_MAP_TETHER` | `tether` | Mid-size station |
+| `USE_MAP_STELLARDELIGHT` | `stellar_delight` | Larger station (default) |
+| `USE_MAP_GROUNDBASE` | `groundbase` | Surface/ground variant |
 
 [Full details: 06-map-selection.md](docs/06-map-selection.md)
 
